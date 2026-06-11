@@ -1,6 +1,7 @@
 body {
     margin: 0;
-    padding: 0;
+    padding: 0 0 0 0;
+    padding-top: 105px; /* account for fixed navbar height */
     background-color: #000000;
     line-height: 1.6;
     font-family: 'Manrope', 'Poppins', sans-serif;
@@ -8,16 +9,24 @@ body {
 
 /* Navbar */
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
     column-gap: 182px;
     height: 105px;
+    width: 100%;
     padding: 0 60px;
-    box-sizing: content-box;
+    box-sizing: border-box;
     box-shadow: 0px 2px 5px 0px rgba(38,35,35,0.6);
     -webkit-box-shadow: 0px 2px 5px 0px rgba(38,35,35,0.6);
     -moz-box-shadow: 0px 2px 5px 0px rgba(38,35,35,0.6);
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 10;
 }
 
 .navbar-center {
@@ -25,13 +34,14 @@ body {
     align-items: center;
     display: flex;
     margin: 0;
-    padding: 0;
+    padding-right: 60px;
+    gap: 15px;
 }
 
 .navbar-center svg {
-    display: block;
-    width: 180px;
-    height: 28px;
+    display: flexbox;
+    width: 204px;
+    height: 33px;
     margin: 0;
 }
 
@@ -43,7 +53,7 @@ body {
 
 .navbar-left {
     justify-self: start;
-    margin-left: 306px;
+    margin-left: 304px;
 }
 
 .navbar-left a, .navbar-right a {
@@ -64,7 +74,7 @@ body {
     align-items: center;
     justify-self: end;
     flex: 1;
-    margin-right: 306px;
+    margin-right: 305px;
 }
 
 .get-started {
@@ -91,6 +101,14 @@ body {
     transform: scale(0.98);
 }
 
+main {
+    width: 100%;
+    min-height: calc(100vh - 105px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .hero-section {
     display: flex;
     align-items: center;
@@ -98,19 +116,18 @@ body {
     width: 878px;
     height: 472px;
     margin: 0 auto;
-    padding-top: 208px;
     box-sizing: border-box;
     color: white;
+    margin-top: 208px;
 }
 .hero-main {
     max-width: 620px;
     align-items: center;
     justify-content: center;
     display: flex;
-    gap: 8px;
+    gap: 28px;
     flex-direction: column;
     text-align: center;
-    margin-top: 208px;
     
 }
 
@@ -137,7 +154,7 @@ body {
     letter-spacing: -1.8%;
     width: 736px;
     margin-top: 28px;
-    opacity: 0.6;
+    opacity: 0.7;
 }
 .hero-buttons {
     display: flex;
@@ -190,4 +207,217 @@ body {
 }
 .download:active {
     transform: scale(0.98);
+}
+
+.discover-main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 244px;
+    align-items: center;
+    justify-content: center;
+    gap: 124px; /* 124px gap between text and image */
+}
+
+.discover-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 244px;
+    width: 100%;
+}
+
+.discover-text h1 {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -1px;
+    align-self: center;
+    color: white;
+    text-align: center;
+}
+
+.discover-text p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 29px;
+    letter-spacing: -1.8%;
+    width: 736px;
+    margin-top: 28px;
+    opacity: 0.6;
+    text-align: center;
+    color: white;
+}
+.discover-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 398px;
+    width: 100%;
+}
+
+.discover-trending {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 28px;
+    justify-content: center;
+    margin: 235px auto 0;
+    width: min(100%, 1309px);
+    max-width: 1309px;
+    height: auto;
+}
+
+.trending-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: min(100%, 833px);
+    height: auto;
+}
+
+.trending-text h1 {
+    align-self: center;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -1%;
+    color: white;
+    text-align: center;
+}
+
+.trending-text p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 29px;
+    letter-spacing: -1.8%;
+    width: 736px;
+    margin-top: 28px;
+    opacity: 0.6;
+    text-align: center;
+    color: white;
+}
+
+.trending-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1309px;
+    height: auto;
+    margin-top: 124px;
+}
+
+.discover-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min(100%, 412px);
+    margin-bottom: 0;
+    margin-top: 0;
+    height: 58px;
+    gap: 28px;
+}
+
+.discover-buttons .start-generating svg{
+    margin-left: 9px;
+}
+
+.gallery-main {
+    font-family: 'Manrope', 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 328px;
+    width: min(100%, 1309px);
+    gap: 28px;
+}
+
+.gallery-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: min(100%, 833px);
+    height: 171px
+}
+
+.gallery-text h1{
+    align-self: center;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -1%;
+    color: white;
+    text-align: center;
+}
+
+.gallery-text p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 29px;
+    letter-spacing: -1.8%;
+    width: 736px;
+    margin-top: 28px;
+    opacity: 0.6;
+    text-align: center;
+    color: white;
+}
+
+.gallery-photo-main {
+    background-color: rgba(14, 14, 14, 1);
+    margin-top: 168px;
+    width: min(100%, 1309px);
+    border-radius: 7px;
+    height: 689px;
+}
+
+.gallery-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min(100%, 1222px);
+    gap: 18px;
+    height: 602;
+    border-radius: 7px;
+    padding: 44px;
+}
+
+.gallery-small-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* 2 equal columns */
+    gap: 18px;  /* spacing between images */
+    width: min(100%, 602px);  /* adjust as needed */
+    height: 602px;
+    border-radius: 6px;
+}
+
+.gallery-big-box {
+    height: 602px;
+}
+
+.gallery-big-box img {
+    width: 601px;
+    height: 601px;
+    border-radius: 6px;
+}
+
+.gallery-small-box img {
+    width: 292px;
+    height: 292px;
+}
+
+.gallery-big-box img, .gallery-small-box img, .trending-image img {
+    transition: transform 0.3s;
+}
+
+.gallery-big-box img:hover, .trending-image img:hover {
+    transform: scale(1.035);
+}
+
+.gallery-small-box img:hover {
+    transform: scale(1.055);
 }
