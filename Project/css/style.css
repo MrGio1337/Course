@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    scrollbar-gutter: stable;
+}
+
 body {
     margin: 0;
     padding: 0 0 0 0;
@@ -249,12 +255,11 @@ main {
     text-align: center;
     color: white;
 }
+
 .discover-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 398px;
-    width: 100%;
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .discover-trending {
@@ -279,6 +284,7 @@ main {
 }
 
 .trending-text h1 {
+    margin: 0;
     align-self: center;
     font-weight: 500;
     font-size: 48px;
@@ -289,6 +295,7 @@ main {
 }
 
 .trending-text p {
+    margin: 0;
     font-weight: 400;
     font-size: 16px;
     line-height: 29px;
@@ -346,7 +353,7 @@ main {
 }
 
 .gallery-text h1{
-    align-self: center;
+    margin: 0;
     font-weight: 500;
     font-size: 48px;
     line-height: 56px;
@@ -356,6 +363,7 @@ main {
 }
 
 .gallery-text p{
+    margin: 0;
     font-weight: 400;
     font-size: 16px;
     line-height: 29px;
@@ -420,4 +428,57 @@ main {
 
 .gallery-small-box img:hover {
     transform: scale(1.055);
+}
+
+.gen-audio-music-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Manrope', 'Poppins', sans-serif;
+    margin-top: 244px;
+    width: min(100%, 1310px);
+    height: 967px
+}
+
+.gen-text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: min(100%, 795px);
+    gap: 28px;
+}
+
+.gen-text-box h1{
+    margin: 0;
+    color: white;
+    font-weight: 500;
+    font-family: 'Manrope', 'Poppins', sans-serif;
+    font-size: 48px;
+    line-height: 53.43px;
+    letter-spacing: -1%;
+    text-align: center;
+}
+
+.gen-text-box p{
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 29px;
+    font-family: 'Poppins', 'Manrope', sans-serif;
+    letter-spacing: -1.8%;
+    opacity: 0.6;
+    text-align: center;
+    color: white;
+}
+
+.gen-main-box {
+    margin-top: 124px;
+    background-color: rgba(14, 14, 14, 1);
+    width: min(100%, 1310px);
+    height: 674px;
+    padding: 43.63px;
+    border-radius: 7px;
+    gap: 18px;
 }
