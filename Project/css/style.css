@@ -581,9 +581,11 @@ main {
 
 .more-feature-main{
     display: flex;
+    flex-direction: column; /* stack children vertically so text goes below header */
     width: 1309px;
     margin-top: 328px;
     align-items: stretch;
+    gap: 28px;
 }
 
 .m-feature-header-text {
@@ -604,7 +606,7 @@ main {
 }
 
 .more-feature-body-main{
-    margin-top: 500px;
+    margin-top: 28px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -612,11 +614,125 @@ main {
 }
 
 .m-f-text-container {
-    gap: 28px;
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: flex-end; /* Aligns all children to the very bottom */
-    width: 100%;
-    height: 400px;  
+    width: min(100%, 1309px);
+    height: auto;  
     border-top: 1px solid white;
+}
+
+.m-f-text h1{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: -0.8px;
+    color: white;
+}
+
+.m-f-text {
+    display: grid;
+    margin-top: 61px;
+    grid-template-columns: repeat(3, 1fr); /* three columns like the screenshot */
+    flex-direction: column;
+    gap: 154px;
+    align-items: start;
+    width: 100%;
+    font-family: 'Manrope';
+}
+
+.m-f-text h1 {
+    margin: 0 0 12px 0;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: -0.8px;
+    color: #ffffff;
+    text-align: left;
+}
+
+.m-f-text p {
+    font-weight: 500;
+    font-size: 16px;
+    color:rgba(130, 130, 130, 1);
+    line-height: 29px;
+    letter-spacing: -0.8px;
+    text-align: left;
+}
+
+.g-s-journey-main{
+    margin-top: 306px;
+    background-image: url("../assets/g-discover.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 474px;
+    border-radius: 19px;
+    position: relative;
+    width: min(100%, 1308px);
+}
+
+.g-s-journey-text{
+    font-family: 'Manrope';
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: start;
+    width: 940px;
+    padding: 108px 160px; /* remove large vertical padding so content centers correctly */
+    gap: 58px; /* spacing between heading and button */
+    height: 256px;
+}
+
+.g-s-journey-text h2{
+    display: block;
+    text-align: center;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Manrope', 'Poppins', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    width: 940px;
+    font-size: 48px;
+    line-height: 75px;
+    letter-spacing: -1%;
+    margin: 0;
+    padding: 0;
+}
+
+.g-s-journey-text .create-account{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 55px;
+    width: 222px;
+    height: 52px;
+    padding: 14px 34px;
+    line-height: 100%;
+    font-weight: 500;
+    letter-spacing: 0;
+    white-space: nowrap;
+    font-weight: 500;
+    font-family: 'Poppins', 'Manrope';
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    transition: opacity 0.3s, transform 0.2s;
+}
+
+.g-s-journey-text .create-account:hover{
+    opacity: 0.5;
+}
+
+.g-s-journey-text .create-account:active{
+    transform: scale(0.98);
+}
+
+footer {
+    margin-top: 271px;
 }
