@@ -7,7 +7,7 @@
 body {
     margin: 0;
     padding: 0 0 0 0;
-    padding-top: 105px; /* account for fixed navbar height */
+    padding-top: 105px;
     background-color: #000000;
     line-height: 1.6;
     font-family: 'Manrope', 'Poppins', sans-serif;
@@ -227,7 +227,7 @@ main {
     margin-top: 244px;
     align-items: center;
     justify-content: center;
-    gap: 124px; /* 124px gap between text and image */
+    gap: 124px;
 }
 
 .discover-text {
@@ -398,9 +398,9 @@ main {
 
 .gallery-small-box {
     display: grid;
-    grid-template-columns: 1fr 1fr;  /* 2 equal columns */
-    gap: 18px;  /* spacing between images */
-    width: min(100%, 602px);  /* adjust as needed */
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    width: min(100%, 602px);
     height: 602px;
     border-radius: 6px;
 }
@@ -482,7 +482,7 @@ main {
     height: 674px;
     padding: 44px;
     border-radius: 7px;
-    gap: 18px; /* control spacing via text margin to place image closer */
+    gap: 18px;
     display: flex;
     flex-direction: row;
     align-items: stretch;
