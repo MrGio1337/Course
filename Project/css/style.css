@@ -211,17 +211,15 @@ main {
 }
 
 @keyframes twinkle {
-  0% {
+  0%, 100%{
     opacity: 0.4;
     transform: scale(0.8);
+    filter: drop-shadow(rgba(255, 255, 255, 0.8));
   }
   50% {
     opacity: 1;
     transform: scale(1.2);
-  }
-  100% {
-    opacity: 0.3;
-    transform: scale(0.8);
+    filter: drop-shadow(rgba(255, 255, 255, 0.8));
   }
 }
 
