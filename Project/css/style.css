@@ -25,8 +25,7 @@ html {
     position: fixed;
     top: 0;
     left: 0;
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    display: flex;
     align-items: center;
     justify-content: center;
     column-gap: 182px;
@@ -43,10 +42,19 @@ html {
     z-index: 10;
 }
 
+.nav-container {
+    width: 1308px;
+    height: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
 .navbar-center {
     align-items: center;
+    justify-content: center;
     display: flex;
-    margin: 0;
     padding: 0;
 }
 
@@ -61,11 +69,6 @@ html {
     display: flex;
     gap: 24px;
     color: white;
-}
-
-.navbar-left {
-    justify-self: start;
-    margin-left: 304px;
 }
 
 .navbar-left a, .navbar-right a {
@@ -83,17 +86,13 @@ html {
 }
 
 .navbar-right {
-    display: flex;
     align-items: center;
-    justify-self: end;
-    flex: 1;
-    padding-right: 280px;
+    padding: 0;
+    margin: 0;
 }
 
 .get-started {
-    display: inline-flex;
     align-items: center;
-    justify-content: center;
     background-color: #ffffff;
     color: #0A0A0A;
     padding: 14px 34px;
@@ -321,6 +320,7 @@ main {
 }
 
 .discover-main {
+    border: 1px solid white;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -368,6 +368,7 @@ main {
 }
 
 .discover-trending {
+    border: 1px solid white;
     display: flex;
     align-items: center;
     flex-direction: column;
